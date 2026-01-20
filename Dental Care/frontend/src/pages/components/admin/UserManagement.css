@@ -1,0 +1,152 @@
+.user-management {
+  animation: fadeIn 0.5s;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section-header h1 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 32px;
+}
+
+.search-box input {
+  padding: 12px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 300px;
+  transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.users-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table thead {
+  background: #f7fafc;
+}
+
+.users-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #2d3748;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.users-table td {
+  padding: 15px;
+  border-top: 1px solid #e2e8f0;
+  color: #4a5568;
+}
+
+.users-table tbody tr:hover {
+  background: #f7fafc;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.status-badge.inactive {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+.btn-delete {
+  background: #f56565;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn-delete:hover {
+  background: #e53e3e;
+}
+
+.no-data {
+  text-align: center;
+  color: #718096;
+  padding: 40px !important;
+}
+
+.users-summary {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.users-summary p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 16px;
+}
+
+.users-summary strong {
+  color: #2d3748;
+  font-size: 18px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .search-box input {
+    width: 100%;
+  }
+
+  .users-table-container {
+    overflow-x: auto;
+  }
+
+  .users-table {
+    min-width: 600px;
+  }
+}

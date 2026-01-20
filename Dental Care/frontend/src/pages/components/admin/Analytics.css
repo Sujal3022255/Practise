@@ -1,0 +1,259 @@
+.analytics {
+  animation: fadeIn 0.5s;
+}
+
+.analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.analytics-header h1 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 32px;
+}
+
+.time-range-selector {
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time-range-selector button {
+  padding: 8px 20px;
+  border: none;
+  background: transparent;
+  color: #4a5568;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.time-range-selector button.active {
+  background: #667eea;
+  color: white;
+}
+
+.analytics-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.analytics-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-card h3 {
+  margin: 0 0 10px 0;
+  color: #718096;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.big-number {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.trend {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.trend.positive {
+  color: #48bb78;
+}
+
+.trend.negative {
+  color: #f56565;
+}
+
+.charts-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.chart-container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container h2 {
+  margin: 0 0 25px 0;
+  color: #2d3748;
+  font-size: 20px;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 250px;
+  padding: 20px 0;
+  gap: 15px;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.bar {
+  width: 100%;
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px 8px 0 0;
+  min-height: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.bar:hover {
+  transform: scaleY(1.05);
+  opacity: 0.9;
+}
+
+.bar-value {
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.bar-label {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.revenue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.revenue-item {
+  display: grid;
+  grid-template-columns: 50px 1fr 100px;
+  align-items: center;
+  gap: 15px;
+}
+
+.revenue-month {
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.revenue-bar-bg {
+  background: #e2e8f0;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.revenue-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  transition: width 0.5s ease;
+}
+
+.revenue-amount {
+  text-align: right;
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.download-section {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-section h2 {
+  margin: 0 0 20px 0;
+  color: #2d3748;
+  font-size: 20px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+  color: white;
+}
+
+.download-btn.pdf {
+  background: #e53e3e;
+}
+
+.download-btn.csv {
+  background: #48bb78;
+}
+
+.download-btn.excel {
+  background: #38b2ac;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 968px) {
+  .charts-section {
+    grid-template-columns: 1fr;
+  }
+}

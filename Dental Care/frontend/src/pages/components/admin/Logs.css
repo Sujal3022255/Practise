@@ -1,0 +1,150 @@
+.logs {
+  animation: fadeIn 0.5s;
+}
+
+.logs h1 {
+  margin: 0 0 30px 0;
+  color: #2d3748;
+  font-size: 32px;
+}
+
+.logs-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logs-tabs button {
+  flex: 1;
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #4a5568;
+  transition: all 0.3s;
+}
+
+.logs-tabs button.active {
+  background: #667eea;
+  color: white;
+}
+
+.logs-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logs-header h2 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 22px;
+}
+
+.btn-export {
+  padding: 10px 20px;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-export:hover {
+  background: #38a169;
+  transform: translateY(-2px);
+}
+
+.logs-table {
+  overflow-x: auto;
+}
+
+.logs-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.logs-table thead {
+  background: #f7fafc;
+}
+
+.logs-table th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.logs-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.logs-table tbody tr {
+  transition: background 0.2s;
+}
+
+.logs-table tbody tr:hover {
+  background: #f7fafc;
+}
+
+.status-badge,
+.severity-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .logs-tabs {
+    flex-direction: column;
+  }
+
+  .logs-table {
+    font-size: 13px;
+  }
+
+  .logs-table th,
+  .logs-table td {
+    padding: 10px;
+  }
+}
